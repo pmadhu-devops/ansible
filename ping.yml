@@ -1,6 +1,6 @@
 - name: ping to the server
   hosts: web
-  beacome: yes
+  become: yes
   tasks:
   - name: pinging the server..
     ansible.builtin.ping:
