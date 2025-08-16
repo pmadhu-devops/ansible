@@ -1,0 +1,12 @@
+1. First Create the two aws redhats instances (ami = devops-practice). ansible-master and ansible-node.
+2. connect the two instance in putty/mobxstren with user name and pwd (ec2-user/DevOps321)
+3. Install the ansible in the Master server 
+    sudo dnf install ansible -y
+
+4. To check the connection from Mster to node. we can test with adhoc commands:
+    ansible -i <target server IP>, all -e ansible_user=ec2-user -e ansible_password=DevOps321 -m ping
+
+5. To aviod this adhoc commands we can use the playbooks to run the all the collections/modules/all commands in singel file.
+6. Playbook command
+    ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321
+
